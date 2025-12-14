@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorpresa de Cumple 🎉</title>
+
+  <!-- FUENTES BONITAS -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #b5e8ff, #e0f7ff);
+      font-family: 'Quicksand', sans-serif;
+      overflow: hidden;
+    }
+
+    /* CONTENEDOR INICIAL */
+    #startContainer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      cursor: pointer;
+    }
+
+    /* AUTO */
+    .car-img {
+      width: 220px;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .click-text {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    /* MENSAJE */
+    .message {
+      display: none;
+      padding: 25px;
+      border-radius: 25px;
+      width: 90%;
+      max-width: 520px;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      /* FONDO DEGRADADO */
+      background: linear-gradient(180deg, #cdefff, #ffd6e8);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .message h1 {
+      font-family: 'Pacifico', cursive;
+      color: #ff6fa5;
+      margin-bottom: 10px;
+    }
+
+    .message p {
+      font-family: 'Pacifico', cursive;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .main-photo {
+      width: 200px;
+      border-radius: 18px;
+      margin: 15px 0;
+    }
+
+    /* CORAZONES Y ESTRELLAS */
+    .floating {
+      position: absolute;
+      animation: float 4s infinite ease-in-out;
+      font-size: 24px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-120px); opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PANTALLA INICIAL -->
+  <div id="startContainer" onclick="showMessage()">
+    <img src="auto.png" alt="Auto" class="car-img">
+    <div class="click-text">CLICK ME 🚗</div>
+  </div>
+
+  <!-- MENSAJE -->
+  <div class="message" id="message">
+
+    <!-- EFECTOS -->
+    <div class="floating" style="top:10%; left:10%;">⭐</div>
+    <div class="floating" style="top:20%; right:15%;">💖</div>
+    <div class="floating" style="bottom:15%; left:20%;">⭐</div>
+    <div class="floating" style="bottom:10%; right:10%;">💖</div>
+
+    <h1>🎉 Feliz Cumpleaños 🎉</h1>
+
+    <!-- FOTO -->
+    <img src="nosotros.jpg" alt="Nuestra foto" class="main-photo">
+
+    <!-- TEXTO MEJORADO -->
+    <p>
+      Holi menso jsjsjs 💙<br><br>
+
+      Hoy quería hacerte algo bonito porque, aunque a veces la vida nos aleja un poquito,
+      quiero que sepas que siempre te tengo presente.<br><br>
+
+      Lamento haberte perdido de vista un tiempo, pero de verdad deseo que sigas formando
+      parte de mi vida y que podamos seguir siendo como somos, sin cambiar eso tan lindo
+      que tenemos.<br><br>
+
+      Te tengo muchísimo cariño, y aunque en algún momento fuimos pareja,
+      me alegra un montón seguir contando con tu amistad.<br><br>
+
+      Eres una persona increíble, con un corazón muy bonito…  
+      pero igual sigues siendo un mango jijijiji 🍃💙<br><br>
+
+      Gracias por existir, por estar y por ser tú.<br>
+      Te quiero mucho 🤍✨
+    </p>
+  </div>
+
+  <!-- MUSICA -->
+  <audio id="music" src="hubo.mp3"></audio>
+
+  <script>
+    function showMessage() {
+      document.getElementById("startContainer").style.display = "none";
+      document.getElementById("message").style.display = "block";
+      document.getElementById("music").play();
+    }
+  </script>
+
+</body>
+</html>
